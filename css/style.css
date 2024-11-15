@@ -6,7 +6,7 @@ body {
 /* body calculator */
 #bodyCalculator {
     background-color: white;
-    height: 500px;
+    height: 600px;
     width: 400px;
 }
 
@@ -14,4 +14,14 @@ body {
 /* section output */
 #sectionOutput {
     height: 70px;
+}
+
+/* button input*/
+button {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    box-shadow: var(--bs-box-shadow);
+    border-color: rgba(var(--bs-light-rgb), var(--bs-border-opacity));
+    --bs-border-opacity: 0.1;
 }
