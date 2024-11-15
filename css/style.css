@@ -1,0 +1,11 @@
+/* body */
+body {
+    background-color: aliceblue;
+}
+
+/* body calculator */
+#bodyCalculator {
+    background-color: white;
+    height: 500px;
+    width: 400px;
+}
