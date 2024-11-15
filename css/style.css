@@ -9,3 +9,9 @@ body {
     height: 500px;
     width: 400px;
 }
+
+
+/* section output */
+#sectionOutput {
+    height: 70px;
+}
