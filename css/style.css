@@ -16,6 +16,19 @@ body {
     height: 70px;
 }
 
+/* text output */
+#paragraphOutput {
+    font-size: 35px;
+    font-family: "Host Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 8px;
+}
+
 /* button input*/
 button {
     border-radius: 50%;
