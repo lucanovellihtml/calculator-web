@@ -24,4 +24,9 @@ button {
     box-shadow: var(--bs-box-shadow);
     border-color: rgba(var(--bs-light-rgb), var(--bs-border-opacity));
     --bs-border-opacity: 0.1;
+    font-size: 35px;
+    font-family: "Host Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
