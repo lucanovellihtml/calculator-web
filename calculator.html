@@ -38,7 +38,7 @@
                         <div class="d-flex gap-2">
 
                             <!-- percent -->
-                            <div class="col"><button type="button">
+                            <div class="col"><button type="button" id="buttonPercent">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px"
                                         viewBox="0 0 24 24" fill="none">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -50,7 +50,7 @@
 
                             <!-- square root -->
                             <div class="col">
-                                <button type="button">
+                                <button type="button" id="buttonSquare">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="40px" height="40px"
                                         viewBox="0 0 24 24" id="square-root" data-name="Flat Line"
                                         class="icon flat-line">
@@ -61,11 +61,11 @@
                                 </button>
                             </div>
 
-                            <div class="col"><button type="button">Primary</button></div>
+                            <div class="col"><button type="reset" id="buttonReset">Primary</button></div>
 
                             <!-- cancel -->
                             <div class="col">
-                                <button type="button" class="bg-dark">
+                                <button type="button" class="bg-dark" id="buttonCancel">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="60px" height="60px" viewBox="0 0 64 64" aria-hidden="true" role="img"
                                         class="iconify iconify--emojione" preserveAspectRatio="xMidYMid meet">
@@ -84,7 +84,7 @@
 
                             <!-- seven -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonSeven" value="7">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-7-circle" viewBox="0 0 16 16">
                                         <path
@@ -95,7 +95,7 @@
 
                             <!-- eight-->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonEight" value="8">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-8-circle" viewBox="0 0 16 16">
                                         <path
@@ -106,7 +106,7 @@
 
                             <!-- nine -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonNine" value="9">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-9-circle" viewBox="0 0 16 16">
                                         <path
@@ -117,7 +117,7 @@
 
                             <!-- subtraction -->
                             <div class="col">
-                                <button type="button" class="bg-danger">
+                                <button type="button" class="bg-danger" id="buttonSubtraction">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white"
                                         class="bi bi-dash" viewBox="0 0 16 16">
                                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
@@ -132,7 +132,7 @@
 
                             <!-- four -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonFour" value="4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-4-circle" viewBox="0 0 16 16">
                                         <path
@@ -144,7 +144,7 @@
 
                             <!-- five -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonFive" value="5">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-5-circle" viewBox="0 0 16 16">
                                         <path
@@ -155,7 +155,7 @@
 
                             <!-- six -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonSix" value="6">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-6-circle" viewBox="0 0 16 16">
                                         <path
@@ -166,7 +166,7 @@
 
                             <!-- divide -->
                             <div class="col">
-                                <button type="button" class="bg-primary">
+                                <button type="button" class="bg-primary" id="buttonDivide">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white"
                                         class="bi bi-slash" viewBox="0 0 16 16">
                                         <path
@@ -181,9 +181,9 @@
 
                             <!-- one -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="50" height="50" fill="currentColor" class="bi bi-1-circle"
-                                        viewBox="0 0 16 16">
+                                <button type="button" class="bg-dark-subtle" id="buttonOne" value="1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                                        class="bi bi-1-circle" viewBox="0 0 16 16">
                                         <path
                                             d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z" />
                                     </svg>
@@ -192,7 +192,7 @@
 
                             <!-- two -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonTwo" value="2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-2-circle" viewBox="0 0 16 16">
                                         <path
@@ -203,7 +203,7 @@
 
                             <!-- three -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonThree" value="3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-3-circle" viewBox="0 0 16 16">
                                         <path
@@ -215,7 +215,7 @@
 
                             <!-- multiplication -->
                             <div class="col">
-                                <button type="button" class="bg-warning">
+                                <button type="button" class="bg-warning" id="buttonMultiplication">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white"
                                         class="bi bi-x" viewBox="0 0 16 16">
                                         <path
@@ -231,7 +231,7 @@
 
                             <!-- dot -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonDot" value=".">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-dot" viewBox="0 0 16 16">
                                         <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
@@ -241,7 +241,7 @@
 
                             <!-- zero -->
                             <div class="col">
-                                <button type="button" class="bg-dark-subtle">
+                                <button type="button" class="bg-dark-subtle" id="buttonZero" value="0">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                                         class="bi bi-0-circle" viewBox="0 0 16 16">
                                         <path
@@ -251,8 +251,9 @@
                                 </button>
                             </div>
 
+                            <!-- equal -->
                             <div class="col">
-                                <button type="button">
+                                <button type="button" id="buttonEqual">
                                     <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5 9H19M5 15H19" stroke="currentColor" stroke-width="2"
@@ -263,7 +264,7 @@
 
                             <!-- plus -->
                             <div class="col">
-                                <button type="button" class="bg-success">
+                                <button type="button" class="bg-success" id="buttonPlus">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white"
                                         class="bi bi-plus" viewBox="0 0 16 16">
                                         <path
