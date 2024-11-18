@@ -2,6 +2,8 @@
 var arrayInput = [];
 var buttonValue, buttonId, operation, result;
 var output = document.getElementById("paragraphOutput");
+
+
 // funzione che in base al bottone cliccato, inserisce nel "sectionOutput" il valore del bottone o l'operazione
 document.addEventListener('click', function (e) {
 
@@ -18,13 +20,6 @@ document.addEventListener('click', function (e) {
     }
 });
 
-/*
-if (valueOne != null)
-    getOperation(buttonId, buttonValue);
-else
-    output.innerHTML = "INSERISCI SECONDO VALORE";
-*/
-
 
 function setOperation(buttonId, output) {
 
@@ -39,23 +34,28 @@ function setOperation(buttonId, output) {
         case "buttonDivide":
             arrayInput.push(output.innerHTML);
             output.innerHTML = "";
+            operation = buttonId;
             break;
 
         case "buttonMultiplication":
             arrayInput.push(output.innerHTML);
             output.innerHTML = "";
+            operation = buttonId;
             break;
 
         case "buttonPlus":
             arrayInput.push(output.innerHTML);
             output.innerHTML = "";
+            operation = buttonId;
             break;
 
         case "buttonEqual":
             if (output.innerHTML != null) {
                 arrayInput.push(output.innerHTML);
                 console.log(arrayInput);
-                console.log("RESULT ", getOperation(operation, arrayInput));
+                const result = getOperation(operation, arrayInput);
+                console.log("RESULT ", result.toString());
+                output.innerHTML = result.toString();
             }
             break;
 
@@ -69,24 +69,41 @@ function setOperation(buttonId, output) {
 }
 
 function getOperation(operation, arrayInput) {
-    console.log("sono qui");
+
+    console.log("operazione" + operation);
+
     switch (operation) {
 
         case "buttonSubtraction":
-            const valueOne = parseInt(arrayInput[0]);
-            const valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
+            console.log("sottrazione");
+            var valueOne = parseInt(arrayInput[0]);
+            var valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
             result = valueOne - valueTwo;
             arrayInput.push(result);
-            console.log("result", valueOne);
             break;
 
         case "buttonDivide":
+            console.log("divisione");
+            var valueOne = parseInt(arrayInput[0]);
+            var valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
+            result = valueOne / valueTwo;
+            arrayInput.push(result);
             break;
 
         case "buttonMultiplication":
+            console.log("moltiplicazione");
+            var valueOne = parseInt(arrayInput[0]);
+            var valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
+            result = valueOne * valueTwo;
+            arrayInput.push(result);
             break;
 
         case "buttonPlus":
+            console.log("somma");
+            var valueOne = parseInt(arrayInput[0]);
+            var valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
+            result = valueOne + valueTwo;
+            arrayInput.push(result);
             break;
 
         default:
