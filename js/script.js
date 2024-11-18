@@ -10,13 +10,15 @@ document.addEventListener('click', function (e) {
     buttonId = e.target.id;
     buttonValue = document.getElementById(e.target.id).value;
 
-    console.log("VALUE ", buttonValue);
-    console.log("ID", buttonId);
-
     if (buttonId != undefined && buttonValue != undefined) {
         output.innerHTML += buttonValue;
+
+        // controllo la lungezza del risultato e disattivo i bottoni
+        if (output.textContent.length > 16)
+            disabledButton();
+
+
         setOperation(buttonId, output);
-        //console.log("VALUE ARRAY", arrayInput);
     }
 });
 
@@ -26,36 +28,40 @@ function setOperation(buttonId, output) {
     switch (buttonId) {
 
         case "buttonSubtraction":
+            activeButton();
             arrayInput.push(output.innerHTML);
             output.innerHTML = "";
             operation = buttonId;
             break;
 
         case "buttonDivide":
+            activeButton();
             arrayInput.push(output.innerHTML);
             output.innerHTML = "";
             operation = buttonId;
             break;
 
         case "buttonMultiplication":
+            activeButton();
             arrayInput.push(output.innerHTML);
             output.innerHTML = "";
             operation = buttonId;
             break;
 
         case "buttonPlus":
+            activeButton();
             arrayInput.push(output.innerHTML);
             output.innerHTML = "";
             operation = buttonId;
             break;
 
         case "buttonEqual":
+            activeButton();
             if (output.innerHTML != null) {
                 arrayInput.push(output.innerHTML);
                 console.log(arrayInput);
                 const result = getOperation(operation, arrayInput);
-                console.log("RESULT ", result.toString());
-                output.innerHTML = result.toString();
+                output.innerHTML = result.toString().substring(0, 16);
             }
 
             //Dopo ogni risultato, pulisco il jar per le operazioni nuove
@@ -157,4 +163,33 @@ function getOperation(operation, arrayInput) {
     }
 
     return result;
+}
+
+// funzione per disabilitare l'input dei bottoni
+function disabledButton() {
+    document.getElementById("buttonZero").disabled = true;
+    document.getElementById("buttonOne").disabled = true;
+    document.getElementById("buttonTwo").disabled = true;
+    document.getElementById("buttonThree").disabled = true;
+    document.getElementById("buttonFour").disabled = true;
+    document.getElementById("buttonFive").disabled = true;
+    document.getElementById("buttonSix").disabled = true;
+    document.getElementById("buttonSeven").disabled = true;
+    document.getElementById("buttonEight").disabled = true;
+    document.getElementById("buttonNine").disabled = true;
+    document.getElementById("buttonDot").disabled = true;
+}
+
+function activeButton() {
+    document.getElementById("buttonZero").disabled = false;
+    document.getElementById("buttonOne").disabled = false;
+    document.getElementById("buttonTwo").disabled = false;
+    document.getElementById("buttonThree").disabled = false;
+    document.getElementById("buttonFour").disabled = false;
+    document.getElementById("buttonFive").disabled = false;
+    document.getElementById("buttonSix").disabled = false;
+    document.getElementById("buttonSeven").disabled = false;
+    document.getElementById("buttonEight").disabled = false;
+    document.getElementById("buttonNine").disabled = false;
+    document.getElementById("buttonDot").disabled = false;
 }
