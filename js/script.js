@@ -79,33 +79,77 @@ function getOperation(operation, arrayInput) {
 
         case "buttonSubtraction":
             console.log("sottrazione");
-            var valueOne = parseInt(arrayInput[0]);
-            var valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
-            result = valueOne - valueTwo;
+            var valueOne, valueTwo;
+
+            //Controllo se i numeri hanno una ,
+            if (Number.parseFloat(arrayInput[0]) || Number.parseFloat(arrayInput[(arrayInput.length) - 1])) {
+                valueOne = parseFloat(arrayInput[0]);
+                valueTwo = parseFloat(arrayInput[(arrayInput.length) - 1]);
+                result = parseFloat(valueOne) - parseFloat(valueTwo);
+            }
+            else {
+                valueOne = parseInt(arrayInput[0]);
+                valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
+                result = valueOne - valueTwo;
+            }
+
             arrayInput.push(result);
             break;
 
         case "buttonDivide":
             console.log("divisione");
-            var valueOne = parseInt(arrayInput[0]);
-            var valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
-            result = valueOne / valueTwo;
+            var valueOne, valueTwo;
+
+            //Controllo se i numeri hanno una ,
+            if (Number.parseFloat(arrayInput[0]) || Number.parseFloat(arrayInput[(arrayInput.length) - 1])) {
+                valueOne = parseFloat(arrayInput[0]);
+                valueTwo = parseFloat(arrayInput[(arrayInput.length) - 1]);
+                result = parseFloat(valueOne) / parseFloat(valueTwo);
+            }
+            else {
+                valueOne = parseInt(arrayInput[0]);
+                valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
+                result = valueOne / valueTwo;
+            }
+
             arrayInput.push(result);
             break;
 
         case "buttonMultiplication":
             console.log("moltiplicazione");
-            var valueOne = parseInt(arrayInput[0]);
-            var valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
-            result = valueOne * valueTwo;
+            var valueOne, valueTwo;
+
+            //Controllo se i numeri hanno una ,
+            if (Number.parseFloat(arrayInput[0]) || Number.parseFloat(arrayInput[(arrayInput.length) - 1])) {
+                valueOne = parseFloat(arrayInput[0]);
+                valueTwo = parseFloat(arrayInput[(arrayInput.length) - 1]);
+                result = parseFloat(valueOne) * parseFloat(valueTwo);
+            }
+            else {
+                valueOne = parseInt(arrayInput[0]);
+                valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
+                result = valueOne * valueTwo;
+            }
+
             arrayInput.push(result);
             break;
 
         case "buttonPlus":
             console.log("somma");
-            var valueOne = parseInt(arrayInput[0]);
-            var valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
-            result = valueOne + valueTwo;
+            var valueOne, valueTwo;
+
+            //Controllo se i numeri hanno una ,
+            if (Number.parseFloat(arrayInput[0]) || Number.parseFloat(arrayInput[(arrayInput.length) - 1])) {
+                valueOne = parseFloat(arrayInput[0]);
+                valueTwo = parseFloat(arrayInput[(arrayInput.length) - 1]);
+                result = parseFloat(valueOne) + parseFloat(valueTwo);
+            }
+            else {
+                valueOne = parseInt(arrayInput[0]);
+                valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
+                result = valueOne + valueTwo;
+            }
+
             arrayInput.push(result);
             break;
 
