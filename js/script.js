@@ -27,6 +27,20 @@ function setOperation(buttonId, output) {
 
     switch (buttonId) {
 
+        case "buttonPercent":
+            activeButton();
+            arrayInput.push(output.innerHTML);
+            output.innerHTML = "";
+            operation = buttonId;
+            break;
+
+        case "buttonSquare":
+            activeButton();
+            arrayInput.push(output.innerHTML);
+            output.innerHTML = "";
+            operation = buttonId;
+            break;
+
         case "buttonSubtraction":
             activeButton();
             arrayInput.push(output.innerHTML);
@@ -82,6 +96,44 @@ function getOperation(operation, arrayInput) {
     console.log("operazione" + operation);
 
     switch (operation) {
+
+        case "buttonPercent":
+            console.log("percentuale");
+            var valueOne, valueTwo;
+
+            //Controllo se i numeri hanno una ,
+            if (Number.parseFloat(arrayInput[0]) || Number.parseFloat(arrayInput[(arrayInput.length) - 1])) {
+                valueOne = parseFloat(arrayInput[0]);
+                valueTwo = parseFloat(arrayInput[(arrayInput.length) - 1]);
+                result = (parseFloat(valueOne) * parseFloat(valueTwo)) / 100;
+            }
+            else {
+                valueOne = parseInt(arrayInput[0]);
+                valueTwo = parseInt(arrayInput[(arrayInput.length) - 1]);
+                result = (valueOne * valueTwo) / 100;
+            }
+
+            console.log(result);
+            arrayInput.push(result);
+            break;
+
+        case "buttonSquare":
+            console.log("potenza");
+            var valueOne;
+
+            //Controllo se i numeri hanno una ,
+            if (Number.parseFloat(arrayInput[0])) {
+                valueOne = parseFloat(arrayInput[0]);
+                result = parseFloat(valueOne) * parseFloat(valueOne);
+            }
+            else {
+                valueOne = parseInt(arrayInput[0]);
+                result = valueOne * valueOne;
+            }
+
+            console.log(result);
+            arrayInput.push(result);
+            break;
 
         case "buttonSubtraction":
             console.log("sottrazione");
