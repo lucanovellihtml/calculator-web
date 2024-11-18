@@ -57,6 +57,9 @@ function setOperation(buttonId, output) {
                 console.log("RESULT ", result.toString());
                 output.innerHTML = result.toString();
             }
+
+            //Dopo ogni risultato, pulisco il jar per le operazioni nuove
+            arrayInput = [];
             break;
 
         case "buttonCancel":
